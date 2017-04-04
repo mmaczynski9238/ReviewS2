@@ -283,7 +283,7 @@ class TestViewController: UIViewController {
             incorrectLabel.alpha = 1
             score += 1
             scoreLbl.text = "\(score)"
-            
+        //
         }
     }
     
