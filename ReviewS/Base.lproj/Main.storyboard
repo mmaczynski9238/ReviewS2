@@ -15,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="jLv-my-Mb3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="BYr-3c-dZq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i0u-lM-mLB">
@@ -41,7 +41,7 @@
                         <viewControllerLayoutGuide type="bottom" id="WCc-ex-UEo"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bcv-Lg-uX6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ReviewS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNE-ur-W0b">
@@ -84,7 +84,7 @@
                         <viewControllerLayoutGuide type="bottom" id="5Qz-Aw-CRN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fFn-Ci-9vT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y27-eU-ZcY">
@@ -238,7 +238,7 @@
                         <viewControllerLayoutGuide type="bottom" id="7Mv-Yz-sUS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8SY-G2-Mk9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFx-kn-otI">
@@ -371,7 +371,7 @@
                         <viewControllerLayoutGuide type="bottom" id="cJ8-Ko-WaM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Qu8-m3-y8g">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UEj-d4-5zO">
@@ -451,7 +451,7 @@
                         <viewControllerLayoutGuide type="bottom" id="8yT-D4-PrE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="wRp-BP-jLN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sq3-mp-Z7l">
@@ -530,7 +530,7 @@
                         <viewControllerLayoutGuide type="bottom" id="7f4-iE-OpA"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="y5y-Z5-ZgJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add a Flashcard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJp-OV-fBz">
@@ -625,7 +625,7 @@
                         <viewControllerLayoutGuide type="bottom" id="210-or-Q5O"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CL1-hC-yhg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAx-sP-B6k">

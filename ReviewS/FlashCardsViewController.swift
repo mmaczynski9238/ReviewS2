@@ -35,7 +35,7 @@ class FlashCardsViewController: UIViewController {
     ]
     var currentCard = 0
     var showFront = true
-    
+    //
     @IBOutlet var fcview: UIView!
     
     override func viewDidLoad() {

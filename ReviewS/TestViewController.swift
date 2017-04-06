@@ -271,7 +271,7 @@ class TestViewController: UIViewController {
             scoreLbl.text = "\(score)"
             
         }
-    }
+    }//
     @IBAction func Btn3(_ sender: AnyObject) {
         if AnswerNumber == 2{
             

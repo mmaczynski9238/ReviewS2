@@ -31,7 +31,7 @@ class StarredFlashCardsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//
         StarredSecondView.isHidden = true
         
         showCard()
