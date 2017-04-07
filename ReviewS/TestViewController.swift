@@ -31,13 +31,13 @@ class TestViewController: UIViewController {
     @IBOutlet weak var theEnd: UILabel!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var restartBtn: UIButton!
-    @IBOutlet var labelButton1: UILabel!
-    @IBOutlet var labelButton2: UILabel!
-    @IBOutlet var labelButton3: UILabel!
-    @IBOutlet var labelButton4: UILabel!
+    //@IBOutlet var labelButton1: UILabel!
+    //@IBOutlet var labelButton2: UILabel!
+    //@IBOutlet var labelButton3: UILabel!
+  //  @IBOutlet var labelButton4: UILabel!
     var counter = 1
     
-    var CQCount = 0
+    //var CQCount = 0
     
     var numOfQuestions = 0
     
@@ -96,19 +96,19 @@ class TestViewController: UIViewController {
     
     func findCount()
     {
-        numOfQuestions = Questions.count
+    //    numOfQuestions = Questions.count
     }
     
     func findCurrentQuestion()
     {
         
         
-        CQCount += 1
+       // CQCount += 1
         
-        if CQCount == numOfQuestions+1 {
-            var count = 0
-        }
-        currentQuestionLabel.text = "\(CQCount)" + "/" + "\(numOfQuestions)"
+        //if CQCount == numOfQuestions+1 {
+          //  var count = 0
+        //}
+       // currentQuestionLabel.text = "\(CQCount)" + "/" + "\(numOfQuestions)"
         
     }
     
@@ -145,21 +145,20 @@ class TestViewController: UIViewController {
             AnswerNumber = Questions[QNumber].Answer
             
             for i in 0..<Buttons.count{
-                //button1.setTitle(Questions[QNumber].Answers[0], for: UIControlState())
-                labelButton1.text = Questions[QNumber].Answers[0]
-                //button2.setTitle(Questions[QNumber].Answers[1], for: UIControlState())
-                labelButton2.text = Questions[QNumber].Answers[1]
-                //button3.setTitle(Questions[QNumber].Answers[2], for: UIControlState())
-                labelButton3.text = Questions[QNumber].Answers[2]
-                //button4.setTitle(Questions[QNumber].Answers[3], for: UIControlState())
-                labelButton4.text = Questions[QNumber].Answers[3]
+                button1.setTitle(Questions[QNumber].Answers[0], for: UIControlState())
+                //labelButton1.text = Questions[QNumber].Answers[0]
+                button2.setTitle(Questions[QNumber].Answers[1], for: UIControlState())
+                //labelButton2.text = Questions[QNumber].Answers[1]
+                button3.setTitle(Questions[QNumber].Answers[2], for: UIControlState())
+                //labelButton3.text = Questions[QNumber].Answers[2]
+                button4.setTitle(Questions[QNumber].Answers[3], for: UIControlState())
+                //labelButton4.text = Questions[QNumber].Answers[3]
                 
             }
             Questions.remove(at: QNumber)
         }
-            
-            
         else{
+            restartBtn.isEnabled = true
             timer.invalidate()
             theEnd.text = "Click Restart to Play Again"
             theEnd.alpha = 1
@@ -169,7 +168,8 @@ class TestViewController: UIViewController {
             button4.isEnabled = false
             restartBtn.isEnabled = true
             savedScore()
-            reset()
+            viewDidLoad()
+            counter = 0
         }
         
         
@@ -205,13 +205,13 @@ class TestViewController: UIViewController {
         
     }
     func reset(){
-        // var alert = UIAlertController(title: "You Win", message: "Click Restart To Play Again", preferredStyle: UIAlertControllerStyle.alert)
-        //var okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil)
-        //  alert.addAction(okAction)
-        //      present(alert, animated: true, completion:nil)
-        //     counter = 0
-        //        print(incorrectAnswers)
-        //       pickQuestions()
+        var alert = UIAlertController(title: "You Win", message: "Click Restart To Play Again", preferredStyle: UIAlertControllerStyle.alert)
+        var okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil)
+        alert.addAction(okAction)
+        present(alert, animated: true, completion:nil)
+        counter = 0
+        print(incorrectAnswers)
+        pickQuestions()
         
         
         
@@ -283,7 +283,7 @@ class TestViewController: UIViewController {
             incorrectLabel.alpha = 1
             score += 1
             scoreLbl.text = "\(score)"
-        //
+            //
         }
     }
     
