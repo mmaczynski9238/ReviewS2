@@ -35,7 +35,7 @@
         <!--Home-->
         <scene sceneID="8z8-or-nJa">
             <objects>
-                <viewController id="vEY-qg-1Km" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="home" id="vEY-qg-1Km" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0oB-KU-u15"/>
                         <viewControllerLayoutGuide type="bottom" id="WCc-ex-UEo"/>
@@ -63,6 +63,15 @@
                                 <connections>
                                     <action selector="flipCardTappedWithSender:" destination="FYc-mz-TkM" eventType="touchUpInside" id="70S-xR-a94"/>
                                     <segue destination="YX9-5M-SL3" kind="show" id="EfI-bw-Rar"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4V-hV-lGY">
+                                <frame key="frameInset" minX="304" minY="751" width="161" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <state key="normal" title="LOGIN"/>
+                                <connections>
+                                    <segue destination="z6I-0F-aCd" kind="show" id="KJu-gV-uih"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -242,7 +251,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFx-kn-otI">
-                                <frame key="frameInset" minY="20" height="44"/>
+                                <frame key="frameInset" minX="-3" minY="20" height="44" maxX="1"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem id="jus-7O-Z0V">
@@ -417,30 +426,43 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j4z-f8-PCM">
-                                <frame key="frameInset" minX="339" minY="605" width="57" height="30"/>
+                                <frame key="frameInset" minX="298" minY="598" width="129" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Register"/>
                                 <connections>
                                     <action selector="registerButton:" destination="RvM-ti-HaN" eventType="touchUpInside" id="wnA-ID-0CZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2p0-ZC-dgm">
-                                <frame key="frameInset" minX="346" minY="693" width="42" height="30"/>
+                                <frame key="frameInset" minX="260" minY="692" width="205" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Log in"/>
+                                <connections>
+                                    <segue destination="z6I-0F-aCd" kind="show" id="3fP-xD-YeI"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Success" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xu8-RR-xUE">
+                                <frame key="frameInset" minX="251" minY="536" width="232" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="passwordTextField" destination="xfi-QE-mMK" id="bLD-Nf-Igs"/>
                         <outlet property="repeatTextField" destination="QLB-Ic-UN2" id="ddx-Mt-TX9"/>
+                        <outlet property="successLabel" destination="Xu8-RR-xUE" id="tkw-8L-yls"/>
                         <outlet property="usernameTextField" destination="UEj-d4-5zO" id="rP2-D7-pkq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wb4-NC-iz0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1998" y="218"/>
+            <point key="canvasLocation" x="-2027.34375" y="-1201.171875"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="J63-3w-GzL">
@@ -509,17 +531,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Igf-z5-2Ye">
+                                <frame key="frameInset" minX="268" minY="390" width="239" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="failed" destination="h0E-Yr-Zca" id="G0F-IC-2ec"/>
+                        <outlet property="label" destination="Igf-z5-2Ye" id="yBq-31-bK0"/>
                         <outlet property="passwordField" destination="3sp-el-c3P" id="JRG-uR-j7a"/>
                         <outlet property="usernameField" destination="54I-iZ-YbR" id="XMg-md-jwp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4pK-Ba-Qkl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1998" y="-455"/>
+            <point key="canvasLocation" x="-1369.53125" y="-1201.171875"/>
         </scene>
         <!--UploadQ View Controller-->
         <scene sceneID="eDa-dG-3ZT">
@@ -736,7 +767,7 @@
                         <outlet property="button4" destination="XBa-TH-eTX" id="sta-A7-83X"/>
                         <outlet property="continueButton" destination="sTH-ab-nlG" id="smV-ZC-HyM"/>
                         <outlet property="incorrectLabel" destination="sTp-zY-MmC" id="6yi-9B-yd8"/>
-                        <outlet property="restartBtn" destination="eap-7Q-91z" id="xhT-gx-4Hs"/>
+                        <outlet property="restartBtn" destination="eap-7Q-91z" id="72W-8h-fH2"/>
                         <outlet property="startButton" destination="4RI-ud-nrl" id="sYN-U6-2XL"/>
                         <outlet property="theEnd" destination="0rr-Rc-5sB" id="9L1-yQ-T54"/>
                         <outletCollection property="Buttons" destination="XBa-TH-eTX" collectionClass="NSMutableArray" id="Zth-9z-2qU"/>
@@ -762,4 +793,7 @@
         <image name="photos-simple-7" width="30" height="30"/>
         <image name="star" width="4130" height="3886"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="KJu-gV-uih"/>
+    </inferredMetricsTieBreakers>
 </document>

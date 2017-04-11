@@ -135,8 +135,6 @@ class TestViewController: UIViewController {
         
     }
     func pickQuestions(){
-        
-        
         restartBtn.isEnabled = false
         if Questions.count > 0 && counter <= 15 {
             QNumber = Int(arc4random_uniform(UInt32(Questions.count)))
@@ -166,7 +164,6 @@ class TestViewController: UIViewController {
             button2.isEnabled = false
             button3.isEnabled = false
             button4.isEnabled = false
-            restartBtn.isEnabled = true
             savedScore()
             viewDidLoad()
             counter = 0
@@ -204,21 +201,21 @@ class TestViewController: UIViewController {
         self.loadData()
         
     }
-    func reset(){
-        var alert = UIAlertController(title: "You Win", message: "Click Restart To Play Again", preferredStyle: UIAlertControllerStyle.alert)
-        var okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil)
-        alert.addAction(okAction)
-        present(alert, animated: true, completion:nil)
-        counter = 0
-        print(incorrectAnswers)
-        pickQuestions()
+  //  func reset(){
+    //    var alert = UIAlertController(title: "You Win", message: "Click Restart To Play Again", preferredStyle: UIAlertControllerStyle.alert)
+      //  var okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil)
+        //alert.addAction(okAction)
+    //    present(alert, animated: true, completion:nil)
+      //  counter = 0
+        //print(incorrectAnswers)
+        //pickQuestions()
         
         
         
         
         
         
-    }
+   // }
     
     
     

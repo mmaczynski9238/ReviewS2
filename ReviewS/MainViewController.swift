@@ -12,10 +12,20 @@ class MainViewController: UIViewController {
 
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var failed: UIButton!
+    var usernameCode = String()
+    var passwordCode = String()
     
     
+    @IBOutlet weak var label: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        UserDefaults.standard.setValue(usernameCode, forKey: "username")
+        UserDefaults.standard.setValue(passwordCode, forKey: "password")
+        label.alpha = 0.0
+       
+
+
         
     }
 
@@ -27,25 +37,27 @@ class MainViewController: UIViewController {
         let usernameStored = UserDefaults.standard.string(forKey: "username")
         let passwordStored = UserDefaults.standard.string(forKey: "password")
         
-        if usernameStored == user{
-            if passwordStored == pass{
-                UserDefaults.standard.set(true,forKey: "isLoggedIn")
-                UserDefaults.standard.synchronize()
-                self.dismiss(animated: true, completion: nil)
-//                let viewController1: ViewController1 = ViewController1()
-//                viewController1.view.backgroundColor = UIColor.blue
-                
-//                self.present(viewController1, animated: true, completion: nil)
-            }
+        if user == usernameStored && pass == passwordStored{
+            print("Good")
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "home")
+            self.present(vc!, animated: true, completion: nil)
             
-            else if passwordStored != pass{
-//                let viewController1: ViewController1 = ViewController1()
-//                viewController1.view.backgroundColor = UIColor.red
-                }
-                
             
             
         }
+        else if user == "" || pass == ""{
+            print("bad")
+        }
+        else{
+            label.text = "Try Again"
+            label.alpha = 1.0
+            
+        }
+        
+   
+            
+            
+        
         
     }
 
