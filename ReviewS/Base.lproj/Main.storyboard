@@ -251,7 +251,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFx-kn-otI">
-                                <frame key="frameInset" minX="-3" minY="20" height="44" maxX="1"/>
+                                <frame key="frameInset" minX="-5" minY="20" height="44" maxX="1"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem id="jus-7O-Z0V">
@@ -482,7 +482,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="47"/>
                                 <state key="normal" title="&gt;"/>
                                 <connections>
-                                    <segue destination="UGW-VP-juG" kind="show" id="tMh-DN-STs"/>
+                                    <segue destination="UGW-VP-juG" kind="show" identifier="homeSegue" id="tMh-DN-STs"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3sp-el-c3P">

@@ -40,8 +40,8 @@ class MainViewController: UIViewController {
         if user == usernameStored && pass == passwordStored{
             print("Good")
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "home")
-            self.present(vc!, animated: true, completion: nil)
-            
+            performSegue(withIdentifier: "homeSegue", sender: nil)
+            navigationController?.pushViewController(vc!, animated: true)
             
             
         }
