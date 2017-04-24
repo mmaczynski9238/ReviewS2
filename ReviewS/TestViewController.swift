@@ -192,7 +192,7 @@ class TestViewController: UIViewController , UITableViewDataSource, UITableViewD
             let variable = i.object(forKey: "timerScore1")
             self.arrayScore.append(variable as! Int)
                 print(variable!)
-                self.arrayScore = self.arrayScore.sorted { $0 > $1 }
+                self.arrayScore = self.arrayScore.sorted {$0 > $1}
                 
             }
         
