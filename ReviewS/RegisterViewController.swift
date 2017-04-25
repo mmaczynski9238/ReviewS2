@@ -27,18 +27,24 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func registerButton(_ sender: UIButton) {
-                let repeatPassword = repeatTextField.text!
+        
+        let repeatPassword = repeatTextField.text!
+        
+        
+//        if (user.isEmpty || passwordCode.isEmpty || repeatPassword.isEmpty){
+//            
+//            let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertControllerStyle.alert)
+//            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+//            self.present(alert, animated: true, completion: nil)
         
         if repeatPassword == passwordTextField.text{
-        
-        if (user.isEmpty || passwordCode.isEmpty || repeatPassword.isEmpty){
-            
-        
+
             user = usernameTextField.text!
             passwordCode = passwordTextField.text!
             successLabel.alpha = 1.0
-            successLabel.text = "Success"
-        }
+            //successLabel.text = "Success"
+            
+        
         
         }
         else if repeatPassword != passwordTextField.text{
@@ -47,7 +53,14 @@ class RegisterViewController: UIViewController {
 
             
         }
+//        func displayAlertMessage(_ userMessage: String){
+//            let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertControllerStyle.alert)
+//            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+//            self.present(alert, animated: true, completion: nil)
+//        }
+//
         
+
     }
     
     
@@ -61,10 +74,6 @@ class RegisterViewController: UIViewController {
         
         }
     
-    func displayAlertMessage(_ userMessage: String){
-        let alert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.alert)
-    }
-    
-
+   
 
 }
