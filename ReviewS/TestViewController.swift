@@ -141,7 +141,7 @@ class TestViewController: UIViewController , UITableViewDataSource, UITableViewD
     }
     func pickQuestions(){
         restartBtn.isEnabled = false
-        if Questions.count > 0 && counter <= 15 {
+        if Questions.count > 0 && counter <= 5 {
             QNumber = Int(arc4random_uniform(UInt32(Questions.count)))
             QLabel.text = Questions[QNumber].Question
             
@@ -196,7 +196,7 @@ class TestViewController: UIViewController , UITableViewDataSource, UITableViewD
                 
             }
         
-        print(self.arrayScore)
+            print(self.arrayScore)
             self.tableViewScore.reloadData()
 
         }
