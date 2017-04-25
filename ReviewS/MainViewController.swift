@@ -53,12 +53,11 @@ class MainViewController: UIViewController {
             label.alpha = 1.0
             
         }
-        
-   
-            
-            
-        
-        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let navVC = segue.destination as? TestViewController{
+            navVC.usernameCode = usernameCode
+        }
     }
 
 }

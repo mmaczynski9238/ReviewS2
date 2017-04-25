@@ -17,8 +17,9 @@ struct Question{
 
 
 
-class TestViewController: UIViewController {
+class TestViewController: UIViewController , UITableViewDataSource, UITableViewDelegate{
     
+    @IBOutlet weak var userButton: UILabel!
     @IBOutlet var currentQuestionLabel: UILabel!
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
@@ -31,6 +32,7 @@ class TestViewController: UIViewController {
     @IBOutlet weak var theEnd: UILabel!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var restartBtn: UIButton!
+    @IBOutlet weak var tableViewScore: UITableView!
     //@IBOutlet var labelButton1: UILabel!
     //@IBOutlet var labelButton2: UILabel!
     //@IBOutlet var labelButton3: UILabel!
@@ -40,6 +42,8 @@ class TestViewController: UIViewController {
     //var CQCount = 0
     
     var numOfQuestions = 0
+    
+    var arrayScore = [Int]()
     
     
     var timerCounter = 0
@@ -72,6 +76,7 @@ class TestViewController: UIViewController {
     
     var newScore = CKRecord(recordType: "Score")
     
+    var usernameCode = String()
     
     
     @IBOutlet weak var QLabel: UILabel!
@@ -86,7 +91,7 @@ class TestViewController: UIViewController {
         scoreLbl = UILabel(frame: CGRect(x: 35, y: 45, width: 77, height: 45))
         scoreLbl.textAlignment = NSTextAlignment.center
         scoreLbl.text = "0"
-        scoreLbl.textColor = UIColor.white
+        scoreLbl.textColor = UIColor.black
         self.scoreLbl.font = UIFont(name: "HelveticaNeue", size:35)
         self.view.addSubview(scoreLbl)
         
@@ -136,7 +141,7 @@ class TestViewController: UIViewController {
     }
     func pickQuestions(){
         restartBtn.isEnabled = false
-        if Questions.count > 0 && counter <= 15 {
+        if Questions.count > 0 && counter <= 5 {
             QNumber = Int(arc4random_uniform(UInt32(Questions.count)))
             QLabel.text = Questions[QNumber].Question
             
@@ -158,15 +163,16 @@ class TestViewController: UIViewController {
         else{
             restartBtn.isEnabled = true
             timer.invalidate()
-            theEnd.text = "Click Restart to Play Again"
+           // theEnd.text = "Click Restart to Play Again"
             theEnd.alpha = 1
             button1.isEnabled = false
             button2.isEnabled = false
             button3.isEnabled = false
             button4.isEnabled = false
             savedScore()
-            viewDidLoad()
             counter = 0
+            tableViewScore.alpha = 1.0
+            
         }
         
         
@@ -181,11 +187,20 @@ class TestViewController: UIViewController {
         
         publicData.perform(query, inZoneWith: nil) { (records, error) in
             
-            let variable = records!.last!.object(forKey: "timerScore1")
-            print(variable!)
+            for i in records!{
+            i.object(forKey: "timerScore1")
+            let variable = i.object(forKey: "timerScore1")
+            self.arrayScore.append(variable as! Int)
+                print(variable!)
+                self.arrayScore = self.arrayScore.sorted {$0 > $1}
+                
+            }
+        
+            print(self.arrayScore)
+            self.tableViewScore.reloadData()
+
         }
     }
-    
     
     func savedScore(){
         newScore["timerScore1"] = score as CKRecordValue?
@@ -201,6 +216,7 @@ class TestViewController: UIViewController {
         self.loadData()
         
     }
+    
   //  func reset(){
     //    var alert = UIAlertController(title: "You Win", message: "Click Restart To Play Again", preferredStyle: UIAlertControllerStyle.alert)
       //  var okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil)
@@ -217,8 +233,15 @@ class TestViewController: UIViewController {
         
    // }
     
-    
-    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        var currentCell = tableView.dequeueReusableCell(withIdentifier: "scoreCell", for: indexPath as IndexPath)
+        currentCell.textLabel?.text = "\(arrayScore[indexPath.row])"
+        print("\(arrayScore[indexPath.row])")
+        return currentCell
+        }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return arrayScore.count
+    }
     
     @IBAction func startButton(_ sender: UIButton) {
         //createTimer
@@ -268,7 +291,7 @@ class TestViewController: UIViewController {
             scoreLbl.text = "\(score)"
             
         }
-    }//
+    }
     @IBAction func Btn3(_ sender: AnyObject) {
         if AnswerNumber == 2{
             
